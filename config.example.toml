@@ -1,0 +1,39 @@
+# spectacle-quickkeys configuration
+# Copy to ~/.config/spectacle-quickkeys/config.toml
+#
+# Every binding is a single printable ASCII character. The key only does
+# anything while a Spectacle window is focused; everywhere else it types
+# normally.
+
+[bindings]
+a = "arrow"
+l = "line"
+
+# Other tools you can bind:
+#   none  crop  select  freehand  highlighter  line  arrow
+#   rectangle  ellipse  pixelate  blur  text  number
+#
+r = "rectangle"
+e = "ellipse"
+f = "freehand"
+h = "highlighter"
+t = "text"
+n = "number"
+b = "blur"
+p = "pixelate"
+x = "none"
+
+[options]
+# Switch Spectacle into annotation mode ("Edit...") if it is not already on,
+# so one keypress is enough from the plain screenshot view.
+auto_enable_annotate = true
+
+# Stop grabbing keys while the Text tool is active or a text field has focus,
+# so you can actually type a text annotation.
+release_on_text_tool = true
+
+# Fallback for if the explicit key grab ever stops firing: also listen to
+# KWin's unfiltered key stream while Spectacle is focused. Off by default; the
+# grab works, and with this on the daemon would see every key you press in
+# Spectacle. See the README.
+watch_fallback = false

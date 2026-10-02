@@ -1,0 +1,14 @@
+[Unit]
+Description=Single-key annotation tool shortcuts for KDE Spectacle
+Documentation=https://github.com/%u/spectacle-quickkeys
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/spectacle-quickkeys
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=graphical-session.target
